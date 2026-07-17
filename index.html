@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>杨修一 · 个人主页</title>
+  <title>Xiuyi Yang · Personal Page</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
@@ -12,15 +12,17 @@
   <!-- ========== 导航栏 ========== -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#" class="nav-logo">杨修一.</a>
+      <a href="#" class="nav-logo" data-i18n="nav-logo">Xiuyi Yang.</a>
       <ul class="nav-menu" id="navMenu">
-        <li><a href="#hero" class="nav-link active">首页</a></li>
-        <li><a href="#about" class="nav-link">关于</a></li>
-        <li><a href="#experience" class="nav-link">项目经历</a></li>
-        <li><a href="#projects" class="nav-link">荣誉奖项</a></li>
-        <li><a href="#gallery" class="nav-link">图库</a></li>
-        <li><a href="#files" class="nav-link">资源</a></li>
-        <li><a href="#contact" class="nav-link">联系</a></li>
+        <li><a href="#hero" class="nav-link active" data-i18n="nav-home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-i18n="nav-about">About</a></li>
+        <li><a href="#experience" class="nav-link" data-i18n="nav-experience">Projects</a></li>
+        <li><a href="#projects" class="nav-link" data-i18n="nav-awards">Awards</a></li>
+        <li><a href="#gallery" class="nav-link" data-i18n="nav-gallery">Gallery</a></li>
+        <li><a href="#org-section" class="nav-link" data-i18n="nav-resources">Resources</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="nav-contact">Contact</a></li>
+        <!-- 语言切换按钮 -->
+        <li><button class="lang-toggle" id="langToggle" onclick="switchLanguage()">中文</button></li>
       </ul>
       <div class="nav-toggle" id="navToggle">
         <span></span><span></span><span></span>
@@ -33,20 +35,23 @@
     <div class="hero-bg"></div>
     <div class="hero-content">
       <div class="hero-avatar">
-        <img src="assets/images/avatar.jpg" alt="头像" />
+        <img src="assets/images/avatar.jpg" alt="Avatar" />
       </div>
-      <h1 class="hero-name">杨修一 · <span class="gradient-text">Xiuyi Yang</span></h1>
-      <p class="hero-title">自动化专业 · 嵌入式开发 / 计算机视觉</p>
+      <h1 class="hero-name">
+        <span data-i18n="hero-greeting">Hello, I'm</span>
+        <span class="gradient-text"> Xiuyi Yang</span>
+      </h1>
+      <p class="hero-title" data-i18n="hero-subtitle">Automation · Embedded Systems / Computer Vision</p>
       <p class="hero-desc">
-        哈尔滨工业大学（威海）自动化专业本科生<br/>
-        热爱嵌入式系统与智能控制，专注于机器人、视觉识别与自动控制领域
+        <span data-i18n="hero-desc1">Undergraduate student in Automation at HIT (Weihai)</span><br/>
+        <span data-i18n="hero-desc2">Passionate about embedded systems and intelligent control, focusing on robotics, computer vision, and automatic control</span>
       </p>
       <div class="hero-actions">
         <a href="#projects" class="btn btn-primary">
-          <i class="fas fa-trophy"></i> 荣誉奖项
+          <i class="fas fa-trophy"></i> <span data-i18n="hero-awards-btn">Awards</span>
         </a>
         <a href="#contact" class="btn btn-outline">
-          <i class="fas fa-envelope"></i> 联系我
+          <i class="fas fa-envelope"></i> <span data-i18n="hero-contact-btn">Contact Me</span>
         </a>
       </div>
       <div class="hero-social">
@@ -57,7 +62,7 @@
       </div>
     </div>
     <div class="scroll-indicator">
-      <span>向下滚动</span>
+      <span data-i18n="hero-scroll">Scroll Down</span>
       <i class="fas fa-chevron-down"></i>
     </div>
   </section>
@@ -66,133 +71,123 @@
   <section class="section" id="about">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">About</span>
-        <h2>关于我</h2>
-        <p class="section-sub">哈尔滨工业大学（威海）· 自动化专业</p>
+        <span class="section-tag" data-i18n="about-tag">About</span>
+        <h2 data-i18n="about-title">About Me</h2>
+        <p class="section-sub" data-i18n="about-sub">HIT (Weihai) · Automation</p>
       </div>
       <div class="about-grid">
         <div class="about-text fade-in">
-          <h3>一名热爱技术的自动化学生</h3>
-          <p>
-            我是 <strong>杨修一</strong>，哈尔滨工业大学（威海）自动化专业本科生。
-            对嵌入式系统、计算机视觉和智能控制有着浓厚的兴趣。
-          </p>
-          <p>
-            在校期间，我多次参加全国大学生电子设计竞赛、海洋航行器设计与制作大赛等科创比赛，
-            积累了丰富的项目实践经验。擅长 <strong>C 语言</strong> 编程，掌握树莓派、OpenCV、PID 控制、
-            蓝牙通信、HSV 视觉识别等技术。
-          </p>
-          <p>
-            曾担任信息科学与工程学院学生会干事，获得"优秀干事"称号，
-            同时多次获得校级人民奖学金。
-          </p>
+          <h3 data-i18n="about-heading">An Automation Student Passionate About Technology</h3>
+          <p data-i18n="about-p1">I am <strong>Xiuyi Yang</strong>, an undergraduate student in Automation at Harbin Institute of Technology (Weihai). I have a strong passion for embedded systems, computer vision, and intelligent control.</p>
+          <p data-i18n="about-p2">During my time at university, I have participated in multiple national competitions including the National College Electronic Design Contest and the Marine Vehicle Design and Making Competition, gaining extensive hands-on project experience. I am proficient in <strong>C programming</strong>, and skilled with Raspberry Pi, OpenCV, PID control, Bluetooth communication, and HSV visual recognition.</p>
+          <p data-i18n="about-p3">I served as a member of the Student Union at the School of Information Science and Engineering, where I was recognized as an "Outstanding Member." I have also received multiple university-level scholarships.</p>
           <div class="about-stats">
             <div class="stat-item">
               <span class="stat-number" data-target="3">0</span>
-              <span class="stat-label">竞赛项目</span>
+              <span class="stat-label" data-i18n="about-stat1-label">Projects</span>
             </div>
             <div class="stat-item">
               <span class="stat-number" data-target="4">0</span>
-              <span class="stat-label">获奖荣誉</span>
+              <span class="stat-label" data-i18n="about-stat2-label">Awards</span>
             </div>
             <div class="stat-item">
               <span class="stat-number" data-target="2">0</span>
-              <span class="stat-label">学期奖学金</span>
+              <span class="stat-label" data-i18n="about-stat3-label">Scholarships</span>
             </div>
           </div>
         </div>
         <div class="about-skills fade-in">
-          <h3>学术技能</h3>
+          <h3 data-i18n="skills-title">Academic Skills</h3>
           <div class="skill-group">
-            <span class="skill-tag">C 语言 · 计算机二级</span>
-            <span class="skill-tag">OpenCV</span>
-            <span class="skill-tag">树莓派</span>
-            <span class="skill-tag">PID 控制</span>
-            <span class="skill-tag">HSV 视觉识别</span>
-            <span class="skill-tag">嵌入式开发</span>
-            <span class="skill-tag">蓝牙通信</span>
-            <span class="skill-tag">Python</span>
+            <span class="skill-tag" data-i18n="skills-tag1">C Language · Level 2 Certificate</span>
+            <span class="skill-tag" data-i18n="skills-tag2">OpenCV</span>
+            <span class="skill-tag" data-i18n="skills-tag3">Raspberry Pi</span>
+            <span class="skill-tag" data-i18n="skills-tag4">PID Control</span>
+            <span class="skill-tag" data-i18n="skills-tag5">HSV Recognition</span>
+            <span class="skill-tag" data-i18n="skills-tag6">Embedded Systems</span>
+            <span class="skill-tag" data-i18n="skills-tag7">Bluetooth Comm.</span>
+            <span class="skill-tag" data-i18n="skills-tag8">Python</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== 项目经历（替代原时间线） ========== -->
+  <!-- ========== 项目经历 ========== -->
   <section class="section section-alt" id="experience">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Projects</span>
-        <h2>项目经历</h2>
-        <p class="section-sub">参与的主要竞赛与科研项目</p>
+        <span class="section-tag" data-i18n="exp-tag">Projects</span>
+        <h2 data-i18n="exp-title">Project Experience</h2>
+        <p class="section-sub" data-i18n="exp-sub">Major competitions and research projects</p>
       </div>
 
-      <!-- 项目表格（桌面视图） -->
+      <!-- 桌面表格 -->
       <div class="table-wrapper fade-in">
         <table class="project-table">
           <thead>
             <tr>
-              <th>#</th>
-              <th>项目名称</th>
-              <th>指导教师</th>
-              <th>承担角色</th>
-              <th>事实与成果</th>
+              <th data-i18n="exp-th1">#</th>
+              <th data-i18n="exp-th2">Project</th>
+              <th data-i18n="exp-th3">Advisor</th>
+              <th data-i18n="exp-th4">Role</th>
+              <th data-i18n="exp-th5">Achievement</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>1</td>
-              <td><strong>2024 电赛 E 题</strong></td>
-              <td>赵占锋</td>
-              <td>队长；视觉代码编写，控制代码编写</td>
-              <td>实现通过树莓派、OpenCV 识别黑色矩形框，并控制二维云台对应移动</td>
+              <td><strong data-i18n="exp-1-name">2024 E-Design Contest — Problem E</strong></td>
+              <td data-i18n="exp-1-teacher">Zhao Zhanfeng</td>
+              <td data-i18n="exp-1-role">Team Leader; Visual &amp; Control Code</td>
+              <td data-i18n="exp-1-result">Used Raspberry Pi and OpenCV to recognize black rectangular frames and control a 2-axis gimbal accordingly</td>
             </tr>
             <tr>
               <td>2</td>
-              <td><strong>2024 电赛 H 题</strong></td>
-              <td>赵占锋</td>
-              <td>队长；循迹红外权重编写，双轮电机 PID 控制编写</td>
-              <td>通过编码器闭环控制，实现两轮小车的直线 PID 行进；通过红外循迹，实现小车沿地面黑色线移动转向</td>
+              <td><strong data-i18n="exp-2-name">2024 E-Design Contest — Problem H</strong></td>
+              <td data-i18n="exp-2-teacher">Zhao Zhanfeng</td>
+              <td data-i18n="exp-2-role">Team Leader; IR tracking &amp; PID control</td>
+              <td data-i18n="exp-2-result">Implemented encoder-based closed-loop PID control for straight-line movement and IR line-following for turning</td>
             </tr>
             <tr>
               <td>3</td>
-              <td><strong>智能船 - C2 模拟对岸火力支援</strong></td>
-              <td>赵占锋</td>
-              <td>队长；编写可视化的 HSV 调节程序，通过 jy901s 反馈，利用 PID 控制船体在遇到风干扰时的自稳</td>
-              <td>完成对红绿光电门的识别以及自动航行，实现蓝牙遥控航行，二维云台可以自动跟踪 HSV 所标记的靶心并控制炮台开火</td>
+              <td><strong data-i18n="exp-3-name">Smart Boat — C2 Shore Fire Support</strong></td>
+              <td data-i18n="exp-3-teacher">Zhao Zhanfeng</td>
+              <td data-i18n="exp-3-role">Team Leader; HSV tuning, JY901S &amp; PID stabilization</td>
+              <td data-i18n="exp-3-result">Achieved automatic navigation through photoelectric gate recognition, Bluetooth remote control, and auto-targeting with HSV-marked bullseye tracking</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      <!-- 移动端卡片视图 -->
+      <!-- 移动端卡片 -->
       <div class="project-card-list">
         <div class="project-card fade-in">
           <div class="project-card-header">
             <span class="project-num">01</span>
-            <h3>2024 电赛 E 题</h3>
+            <h3 data-i18n="exp-card1-title">2024 E-Design Contest — Problem E</h3>
           </div>
-          <div class="project-meta"><i class="fas fa-user-tie"></i> 指导教师：赵占锋</div>
-          <div class="project-role"><i class="fas fa-users"></i> 队长；视觉代码编写，控制代码编写</div>
-          <p>实现通过树莓派、OpenCV 识别黑色矩形框，并控制二维云台对应移动</p>
+          <div class="project-meta"><i class="fas fa-user-tie"></i> <span data-i18n="exp-1-teacher">Zhao Zhanfeng</span></div>
+          <div class="project-role"><i class="fas fa-users"></i> <span data-i18n="exp-card1-role">Team Leader; Visual &amp; Control Code</span></div>
+          <p data-i18n="exp-card1-desc">Used Raspberry Pi and OpenCV to recognize black rectangular frames and control a 2-axis gimbal accordingly</p>
         </div>
         <div class="project-card fade-in">
           <div class="project-card-header">
             <span class="project-num">02</span>
-            <h3>2024 电赛 H 题</h3>
+            <h3 data-i18n="exp-card2-title">2024 E-Design Contest — Problem H</h3>
           </div>
-          <div class="project-meta"><i class="fas fa-user-tie"></i> 指导教师：赵占锋</div>
-          <div class="project-role"><i class="fas fa-users"></i> 队长；循迹红外权重编写，双轮电机 PID 控制编写</div>
-          <p>通过编码器闭环控制，实现两轮小车的直线 PID 行进；通过红外循迹，实现小车沿地面黑色线移动转向</p>
+          <div class="project-meta"><i class="fas fa-user-tie"></i> <span data-i18n="exp-2-teacher">Zhao Zhanfeng</span></div>
+          <div class="project-role"><i class="fas fa-users"></i> <span data-i18n="exp-card2-role">Team Leader; IR tracking &amp; PID control</span></div>
+          <p data-i18n="exp-card2-desc">Implemented encoder-based closed-loop PID control for straight-line movement and IR line-following for turning</p>
         </div>
         <div class="project-card fade-in">
           <div class="project-card-header">
             <span class="project-num">03</span>
-            <h3>智能船 - C2 模拟对岸火力支援</h3>
+            <h3 data-i18n="exp-card3-title">Smart Boat — C2 Shore Fire Support</h3>
           </div>
-          <div class="project-meta"><i class="fas fa-user-tie"></i> 指导教师：赵占锋</div>
-          <div class="project-role"><i class="fas fa-users"></i> 队长；编写可视化的 HSV 调节程序，通过 jy901s 反馈，利用 PID 控制船体在遇到风干扰时的自稳</div>
-          <p>完成对红绿光电门的识别以及自动航行，实现蓝牙遥控航行，二维云台可以自动跟踪 HSV 所标记的靶心并控制炮台开火</p>
+          <div class="project-meta"><i class="fas fa-user-tie"></i> <span data-i18n="exp-3-teacher">Zhao Zhanfeng</span></div>
+          <div class="project-role"><i class="fas fa-users"></i> <span data-i18n="exp-card3-role">Team Leader; HSV tuning, JY901S &amp; PID stabilization</span></div>
+          <p data-i18n="exp-card3-desc">Achieved automatic navigation through photoelectric gate recognition, Bluetooth remote control, and auto-targeting with HSV-marked bullseye tracking</p>
         </div>
       </div>
     </div>
@@ -202,51 +197,51 @@
   <section class="section" id="projects">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Awards</span>
-        <h2>荣誉奖项</h2>
-        <p class="section-sub">竞赛获奖与奖学金</p>
+        <span class="section-tag" data-i18n="award-tag">Awards</span>
+        <h2 data-i18n="award-title">Honors &amp; Awards</h2>
+        <p class="section-sub" data-i18n="award-sub">Competition achievements and scholarships</p>
       </div>
 
-      <!-- 奖项表格（桌面） -->
+      <!-- 桌面表格 -->
       <div class="table-wrapper fade-in">
         <table class="award-table">
           <thead>
             <tr>
-              <th>#</th>
-              <th>具体名称</th>
-              <th>获奖时间</th>
-              <th>获奖级别</th>
-              <th>颁奖单位</th>
+              <th data-i18n="award-th1">#</th>
+              <th data-i18n="award-th2">Title</th>
+              <th data-i18n="award-th3">Date</th>
+              <th data-i18n="award-th4">Level</th>
+              <th data-i18n="award-th5">Organization</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>1</td>
-              <td>第十五届海洋航行器设计与制作大赛齐鲁赛区 — C2 模拟对岸火力支援</td>
-              <td>2026.7.9</td>
-              <td>齐鲁区域赛</td>
-              <td>中国造船工程学会</td>
+              <td><strong data-i18n="award-1-name">15th Marine Vehicle Design Contest (Qilu) — C2 Shore Fire Support</strong></td>
+              <td data-i18n="award-1-date">2026.7.9</td>
+              <td data-i18n="award-1-level">Regional (Qilu)</td>
+              <td data-i18n="award-1-org">CSNAME</td>
             </tr>
             <tr>
               <td>2</td>
-              <td>哈尔滨工业大学（威海）2025-2026 学年秋季二等人民奖学金</td>
-              <td>2026.6.10</td>
-              <td>校级</td>
-              <td>哈尔滨工业大学（威海）</td>
+              <td><strong data-i18n="award-2-name">HIT (Weihai) Fall 2025-2026 Second-Class Scholarship</strong></td>
+              <td data-i18n="award-2-date">2026.6.10</td>
+              <td data-i18n="award-2-level">University</td>
+              <td data-i18n="award-2-org">HIT (Weihai)</td>
             </tr>
             <tr>
               <td>3</td>
-              <td>哈尔滨工业大学（威海）2025-2026 学年春季一等人民奖学金</td>
-              <td>2025.12.10</td>
-              <td>校级</td>
-              <td>哈尔滨工业大学（威海）</td>
+              <td><strong data-i18n="award-3-name">HIT (Weihai) Spring 2025-2026 First-Class Scholarship</strong></td>
+              <td data-i18n="award-3-date">2025.12.10</td>
+              <td data-i18n="award-3-level">University</td>
+              <td data-i18n="award-3-org">HIT (Weihai)</td>
             </tr>
             <tr>
               <td>4</td>
-              <td>第十六届中国大学生物理学术竞赛</td>
-              <td>2025.8.25</td>
-              <td>国家级</td>
-              <td>中国大学生物理学术竞赛组委会</td>
+              <td><strong data-i18n="award-4-name">16th China Undergraduate Physics Tournament</strong></td>
+              <td data-i18n="award-4-date">2025.8.25</td>
+              <td data-i18n="award-4-level">National</td>
+              <td data-i18n="award-4-org">CUPT Committee</td>
             </tr>
           </tbody>
         </table>
@@ -256,42 +251,43 @@
       <div class="award-card-list">
         <div class="award-card fade-in">
           <div class="award-badge">🏆</div>
-          <h3>第十五届海洋航行器设计与制作大赛齐鲁赛区</h3>
-          <p class="award-sub">C2 模拟对岸火力支援</p>
+          <h3 data-i18n="award-card1-title">15th Marine Vehicle Design Contest (Qilu)</h3>
+          <p class="award-sub-detail" data-i18n="award-card1-sub">C2 Shore Fire Support</p>
           <div class="award-meta">
-            <span><i class="fas fa-calendar"></i> 2026.7.9</span>
-            <span><i class="fas fa-tag"></i> 齐鲁区域赛</span>
+            <span><i class="fas fa-calendar"></i> <span data-i18n="award-1-date">2026.7.9</span></span>
+            <span><i class="fas fa-tag"></i> <span data-i18n="award-1-level">Regional</span></span>
           </div>
-          <div class="award-org">中国造船工程学会</div>
+          <div class="award-org" data-i18n="award-card1-org">CSNAME</div>
         </div>
         <div class="award-card fade-in">
           <div class="award-badge">🥈</div>
-          <h3>二等人民奖学金</h3>
-          <p class="award-sub">哈尔滨工业大学（威海）2025-2026 学年秋季</p>
+          <h3 data-i18n="award-card2-title">Second-Class Scholarship</h3>
+          <p class="award-sub-detail" data-i18n="award-card2-sub">HIT (Weihai) Fall 2025-2026</p>
           <div class="award-meta">
-            <span><i class="fas fa-calendar"></i> 2026.6.10</span>
-            <span><i class="fas fa-tag"></i> 校级</span>
+            <span><i class="fas fa-calendar"></i> <span data-i18n="award-2-date">2026.6.10</span></span>
+            <span><i class="fas fa-tag"></i> <span data-i18n="award-2-level">University</span></span>
           </div>
-          <div class="award-org">哈尔滨工业大学（威海）</div>
+          <div class="award-org" data-i18n="award-card2-org">HIT (Weihai)</div>
         </div>
         <div class="award-card fade-in">
           <div class="award-badge">🥇</div>
-          <h3>一等人民奖学金</h3>
-          <p class="award-sub">哈尔滨工业大学（威海）2025-2026 学年春季</p>
+          <h3 data-i18n="award-card3-title">First-Class Scholarship</h3>
+          <p class="award-sub-detail" data-i18n="award-card3-sub">HIT (Weihai) Spring 2025-2026</p>
           <div class="award-meta">
-            <span><i class="fas fa-calendar"></i> 2025.12.10</span>
-            <span><i class="fas fa-tag"></i> 校级</span>
+            <span><i class="fas fa-calendar"></i> <span data-i18n="award-3-date">2025.12.10</span></span>
+            <span><i class="fas fa-tag"></i> <span data-i18n="award-3-level">University</span></span>
           </div>
-          <div class="award-org">哈尔滨工业大学（威海）</div>
+          <div class="award-org" data-i18n="award-card3-org">HIT (Weihai)</div>
         </div>
         <div class="award-card fade-in">
           <div class="award-badge">🎓</div>
-          <h3>第十六届中国大学生物理学术竞赛</h3>
+          <h3 data-i18n="award-card4-title">16th China Undergraduate Physics Tournament</h3>
+          <p class="award-sub-detail" data-i18n="award-card4-sub"></p>
           <div class="award-meta">
-            <span><i class="fas fa-calendar"></i> 2025.8.25</span>
-            <span><i class="fas fa-tag"></i> 国家级</span>
+            <span><i class="fas fa-calendar"></i> <span data-i18n="award-4-date">2025.8.25</span></span>
+            <span><i class="fas fa-tag"></i> <span data-i18n="award-4-level">National</span></span>
           </div>
-          <div class="award-org">中国大学生物理学术竞赛组委会</div>
+          <div class="award-org" data-i18n="award-card4-org">CUPT Committee</div>
         </div>
       </div>
     </div>
@@ -301,34 +297,34 @@
   <section class="section section-alt" id="gallery">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Gallery</span>
-        <h2>精彩瞬间</h2>
-        <p class="section-sub">竞赛与校园生活剪影</p>
+        <span class="section-tag" data-i18n="gallery-tag">Gallery</span>
+        <h2 data-i18n="gallery-title">Moments</h2>
+        <p class="section-sub" data-i18n="gallery-sub">Competition and campus life highlights</p>
       </div>
       <div class="gallery-grid">
         <div class="gallery-item fade-in" onclick="openLightbox(this)">
-          <img src="https://placehold.co/800x600/6366f1/ffffff?text=电赛+E题" alt="电赛E题" />
-          <div class="gallery-caption">2024 电赛 E 题</div>
+          <img src="https://placehold.co/800x600/6366f1/ffffff?text=E+Design+E" alt="E Design E" />
+          <div class="gallery-caption" data-i18n="gallery-cap1">2024 E-Design Contest — Problem E</div>
         </div>
         <div class="gallery-item fade-in" onclick="openLightbox(this)">
-          <img src="https://placehold.co/800x600/8b5cf6/ffffff?text=电赛+H题" alt="电赛H题" />
-          <div class="gallery-caption">2024 电赛 H 题</div>
+          <img src="https://placehold.co/800x600/8b5cf6/ffffff?text=E+Design+H" alt="E Design H" />
+          <div class="gallery-caption" data-i18n="gallery-cap2">2024 E-Design Contest — Problem H</div>
         </div>
         <div class="gallery-item fade-in" onclick="openLightbox(this)">
-          <img src="https://placehold.co/800x600/14b8a6/ffffff?text=智能船" alt="智能船" />
-          <div class="gallery-caption">智能船 - C2 模拟对岸火力支援</div>
+          <img src="https://placehold.co/800x600/14b8a6/ffffff?text=Smart+Boat" alt="Smart Boat" />
+          <div class="gallery-caption" data-i18n="gallery-cap3">Smart Boat — C2 Fire Support</div>
         </div>
         <div class="gallery-item fade-in" onclick="openLightbox(this)">
-          <img src="https://placehold.co/800x600/f59e0b/ffffff?text=物理竞赛" alt="物理学术竞赛" />
-          <div class="gallery-caption">第十六届中国大学生物理学术竞赛</div>
+          <img src="https://placehold.co/800x600/f59e0b/ffffff?text=Physics+CUPT" alt="Physics Tournament" />
+          <div class="gallery-caption" data-i18n="gallery-cap4">China Undergraduate Physics Tournament</div>
         </div>
         <div class="gallery-item fade-in" onclick="openLightbox(this)">
-          <img src="https://placehold.co/800x600/ec4899/ffffff?text=学生会" alt="学生会" />
-          <div class="gallery-caption">信息科学与工程学院学生会</div>
+          <img src="https://placehold.co/800x600/ec4899/ffffff?text=Student+Union" alt="Student Union" />
+          <div class="gallery-caption" data-i18n="gallery-cap5">School Student Union</div>
         </div>
         <div class="gallery-item fade-in" onclick="openLightbox(this)">
-          <img src="https://placehold.co/800x600/3b82f6/ffffff?text=工大" alt="哈工大威海" />
-          <div class="gallery-caption">哈尔滨工业大学（威海）</div>
+          <img src="https://placehold.co/800x600/3b82f6/ffffff?text=HIT+Weihai" alt="HIT Weihai" />
+          <div class="gallery-caption" data-i18n="gallery-cap6">HIT (Weihai) Campus</div>
         </div>
       </div>
     </div>
@@ -337,54 +333,54 @@
   <!-- 灯箱 -->
   <div class="lightbox" id="lightbox" onclick="closeLightbox()">
     <span class="lightbox-close">&times;</span>
-    <img src="" alt="放大图片" id="lightboxImg" />
+    <img src="" alt="Lightbox" id="lightboxImg" />
   </div>
 
-  <!-- ========== 学生会经历 + 资源 ========== -->
-  <section class="section" id="files">
+  <!-- ========== 学生工作（org-section） ========== -->
+  <section class="section" id="org-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Experience</span>
-        <h2>学生工作</h2>
-        <p class="section-sub">校园组织与服务经历</p>
+        <span class="section-tag" data-i18n="org-tag">Experience</span>
+        <h2 data-i18n="org-title">Student Organizations</h2>
+        <p class="section-sub" data-i18n="org-sub">Campus involvement and service</p>
       </div>
       <div class="org-card fade-in">
         <div class="org-icon"><i class="fas fa-users"></i></div>
         <div class="org-info">
-          <h3>哈尔滨工业大学（威海）信息科学与工程学院学生会</h3>
+          <h3 data-i18n="org-name">Student Union, School of Information Science and Engineering, HIT (Weihai)</h3>
           <div class="org-meta">
-            <span><i class="fas fa-calendar-alt"></i> 2024 - 2025</span>
-            <span><i class="fas fa-map-marker-alt"></i> 哈尔滨工业大学（威海）</span>
+            <span><i class="fas fa-calendar-alt"></i> <span data-i18n="org-period">2024 - 2025</span></span>
+            <span><i class="fas fa-map-marker-alt"></i> <span data-i18n="org-location">HIT (Weihai)</span></span>
           </div>
-          <p><strong>承担角色：</strong>部员</p>
-          <p><strong>取得成就：</strong>学生会"优秀干事"</p>
+          <p><strong><span data-i18n="org-role-label">Role</span>:</strong> <span data-i18n="org-role">Member</span></p>
+          <p><strong><span data-i18n="org-achievement-label">Achievement</span>:</strong> <span data-i18n="org-achievement">Student Union "Outstanding Member"</span></p>
         </div>
       </div>
 
       <div class="section-header" style="margin-top: 80px;">
-        <span class="section-tag">Resources</span>
-        <h2>资源下载</h2>
-        <p class="section-sub">个人简历与项目文件</p>
+        <span class="section-tag" data-i18n="res-tag">Resources</span>
+        <h2 data-i18n="res-title">Downloads</h2>
+        <p class="section-sub" data-i18n="res-sub">Resume and project files</p>
       </div>
       <div class="files-grid">
         <div class="file-card fade-in">
           <div class="file-icon"><i class="fas fa-file-pdf"></i></div>
           <div class="file-info">
-            <h3>个人简历</h3>
-            <p>PDF 文件</p>
+            <h3 data-i18n="res-file1-name">Resume / CV</h3>
+            <p data-i18n="res-file1-type">PDF File</p>
           </div>
           <a href="assets/files/resume.pdf" class="btn btn-sm" download>
-            <i class="fas fa-download"></i> 下载
+            <i class="fas fa-download"></i> <span data-i18n="res-file1-name">Download</span>
           </a>
         </div>
         <div class="file-card fade-in">
           <div class="file-icon"><i class="fas fa-file-archive"></i></div>
           <div class="file-info">
-            <h3>项目源码</h3>
-            <p>ZIP 压缩包</p>
+            <h3 data-i18n="res-file2-name">Project Source Code</h3>
+            <p data-i18n="res-file2-type">ZIP Archive</p>
           </div>
           <a href="assets/files/projects.zip" class="btn btn-sm" download>
-            <i class="fas fa-download"></i> 下载
+            <i class="fas fa-download"></i> <span data-i18n="res-file2-name">Download</span>
           </a>
         </div>
       </div>
@@ -395,57 +391,57 @@
   <section class="section section-alt" id="contact">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Contact</span>
-        <h2>联系我</h2>
-        <p class="section-sub">期待与您交流合作</p>
+        <span class="section-tag" data-i18n="contact-tag">Contact</span>
+        <h2 data-i18n="contact-title">Contact Me</h2>
+        <p class="section-sub" data-i18n="contact-sub">Looking forward to connecting with you</p>
       </div>
       <div class="contact-grid">
         <div class="contact-info fade-in">
           <div class="contact-item">
             <i class="fas fa-user"></i>
             <div>
-              <h4>姓名</h4>
-              <p>杨修一 (Xiuyi Yang)</p>
+              <h4 data-i18n="contact-name">Name</h4>
+              <p data-i18n="contact-name-value">Xiuyi Yang</p>
             </div>
           </div>
           <div class="contact-item">
             <i class="fas fa-envelope"></i>
             <div>
-              <h4>邮箱</h4>
+              <h4 data-i18n="contact-email">Email</h4>
               <a href="mailto:3023445006@qq.com">3023445006@qq.com</a>
             </div>
           </div>
           <div class="contact-item">
             <i class="fas fa-phone"></i>
             <div>
-              <h4>手机</h4>
+              <h4 data-i18n="contact-phone">Phone</h4>
               <a href="tel:19861561606">19861561606</a>
             </div>
           </div>
           <div class="contact-item">
             <i class="fas fa-university"></i>
             <div>
-              <h4>学校</h4>
-              <p>哈尔滨工业大学（威海）· 自动化专业</p>
+              <h4 data-i18n="contact-school">University</h4>
+              <p data-i18n="contact-school-value">HIT (Weihai) · Automation</p>
             </div>
           </div>
           <div class="contact-item">
             <i class="fas fa-map-marker-alt"></i>
             <div>
-              <h4>位置</h4>
-              <p>中国 · 山东 · 威海</p>
+              <h4 data-i18n="contact-location">Location</h4>
+              <p data-i18n="contact-location-value">Weihai · Shandong · China</p>
             </div>
           </div>
         </div>
         <form class="contact-form fade-in" id="contactForm">
           <div class="form-row">
-            <input type="text" placeholder="您的姓名" required />
-            <input type="email" placeholder="您的邮箱" required />
+            <input type="text" placeholder="Your Name" required data-i18n-placeholder="contact-form-name" />
+            <input type="email" placeholder="Your Email" required data-i18n-placeholder="contact-form-email" />
           </div>
-          <input type="text" placeholder="主题" />
-          <textarea rows="5" placeholder="留言内容..."></textarea>
+          <input type="text" placeholder="Subject" data-i18n-placeholder="contact-form-subject" />
+          <textarea rows="5" placeholder="Your Message..." data-i18n-placeholder="contact-form-message"></textarea>
           <button type="submit" class="btn btn-primary">
-            <i class="fas fa-paper-plane"></i> 发送留言
+            <i class="fas fa-paper-plane"></i> <span data-i18n="contact-form-btn">Send Message</span>
           </button>
         </form>
       </div>
@@ -457,18 +453,18 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
-          <h3>杨修一 · Xiuyi Yang</h3>
-          <p>哈尔滨工业大学（威海）自动化专业</p>
+          <h3 data-i18n="footer-brand">Xiuyi Yang</h3>
+          <p data-i18n="footer-desc">HIT (Weihai) · Automation</p>
         </div>
         <div class="footer-links">
-          <h4>快捷导航</h4>
-          <a href="#hero">首页</a>
-          <a href="#about">关于</a>
-          <a href="#experience">项目经历</a>
-          <a href="#projects">荣誉奖项</a>
+          <h4 data-i18n="footer-nav-title">Quick Links</h4>
+          <a href="#hero" data-i18n="nav-home">Home</a>
+          <a href="#about" data-i18n="nav-about">About</a>
+          <a href="#experience" data-i18n="nav-experience">Projects</a>
+          <a href="#projects" data-i18n="nav-awards">Awards</a>
         </div>
         <div class="footer-social">
-          <h4>联系方式</h4>
+          <h4 data-i18n="footer-social-title">Contact</h4>
           <div class="social-icons">
             <a href="mailto:3023445006@qq.com"><i class="fas fa-envelope"></i></a>
             <a href="#"><i class="fab fa-github"></i></a>
@@ -478,7 +474,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 杨修一. All rights reserved.</p>
+        <p data-i18n="footer-copyright">&copy; 2026 Xiuyi Yang. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -488,6 +484,7 @@
     <i class="fas fa-arrow-up"></i>
   </button>
 
+  <script src="js/translations.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

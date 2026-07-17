@@ -833,4 +833,40 @@ tbody td:nth-child(2) { min-width: 160px; }
   .org-meta { justify-content: center; }
 }
 
+/* ========== 语言切换按钮 ========== */
+.lang-toggle {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: .85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: inherit;
+  margin-left: 4px;
+}
+.lang-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99,102,241,.35);
+}
+
+/* Award sub detail for mobile cards */
+.award-sub-detail {
+  color: var(--text-light);
+  font-size: .88rem;
+  margin-bottom: 12px;
+  min-height: 1.2em;
+}
+
+/* ===== 语言按钮在移动端的适配 ===== */
+@media (max-width: 768px) {
+  .lang-toggle {
+    margin: 12px 0 0;
+    width: fit-content;
+    padding: 8px 24px;
+  }
+}
+
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }

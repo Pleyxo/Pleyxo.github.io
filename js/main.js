@@ -12,6 +12,51 @@ const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
 const contactForm = document.getElementById('contactForm');
 
+// ========== 当前语言 (默认英文) ==========
+let currentLang = 'en';
+
+// ========== 语言切换函数 (全局) ==========
+function switchLanguage() {
+  currentLang = currentLang === 'en' ? 'zh' : 'en';
+
+  // 更新所有 data-i18n 元素的文本
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (translations[currentLang][key]) {
+      el.innerHTML = translations[currentLang][key];
+    }
+  });
+
+  // 更新所有 data-i18n-placeholder 输入框的占位符
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.dataset.i18nPlaceholder;
+    if (translations[currentLang][key]) {
+      el.placeholder = translations[currentLang][key];
+    }
+  });
+
+  // 更新语言切换按钮文本
+  const langBtn = document.getElementById('langToggle');
+  if (langBtn) {
+    langBtn.textContent = currentLang === 'en' ? '中文' : 'English';
+  }
+
+  // 更新 HTML lang 属性
+  document.documentElement.lang = currentLang === 'en' ? 'en' : 'zh-CN';
+
+  // 更新页面标题
+  document.title = currentLang === 'en'
+    ? 'Xiuyi Yang · Personal Page'
+    : '杨修一 · 个人主页';
+
+  // 重新触发统计数字动画（如果重新切回英文且有统计数字可见）
+  if (currentLang === 'en') {
+    document.querySelectorAll('.stat-number').forEach(el => {
+      el.dataset.animated = '';
+    });
+  }
+}
+
 // ========== 导航栏滚动效果 ==========
 window.addEventListener('scroll', () => {
   const scrollY = window.scrollY;
@@ -32,7 +77,8 @@ function updateActiveNavLink() {
     }
   });
   navLinks.forEach(link => {
-    link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
+    const href = link.getAttribute('href');
+    link.classList.toggle('active', href === `#${current}`);
   });
 }
 
@@ -132,7 +178,10 @@ backToTop.addEventListener('click', () => {
 if (contactForm) {
   contactForm.addEventListener('submit', e => {
     e.preventDefault();
-    showToast('✅ 留言已收到，感谢您的联系！');
+    const successKey = currentLang === 'en'
+      ? 'contact-form-success'
+      : 'contact-form-success';
+    showToast('✅ ' + (translations[currentLang]['contact-form-success'] || 'Message sent! Thank you!'));
     contactForm.reset();
   });
 }
@@ -156,5 +205,5 @@ function showToast(message) {
 }
 
 // ========== 初始化 ==========
-console.log('🌟 个人主页已加载完成');
-console.log('💡 提示：将所有图片放在 assets/images/，文件放在 assets/files/ 目录下');
+console.log('🌟 Personal page loaded. Current language: ' + currentLang);
+console.log('💡 Place images in assets/images/, files in assets/files/');
