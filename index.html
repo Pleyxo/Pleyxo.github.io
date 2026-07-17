@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>个人主页</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- ========== 导航栏 ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">Portfolio.</a>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#hero" class="nav-link active">首页</a></li>
+        <li><a href="#about" class="nav-link">关于</a></li>
+        <li><a href="#experience" class="nav-link">经历</a></li>
+        <li><a href="#projects" class="nav-link">成果</a></li>
+        <li><a href="#gallery" class="nav-link">图库</a></li>
+        <li><a href="#files" class="nav-link">资源</a></li>
+        <li><a href="#contact" class="nav-link">联系</a></li>
+      </ul>
+      <div class="nav-toggle" id="navToggle">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== 首页/Hero ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-avatar">
+        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=portfolio&backgroundColor=b6e3f4" alt="头像" />
+      </div>
+      <h1 class="hero-name">你好，我是 <span class="gradient-text">你的名字</span></h1>
+      <p class="hero-title">全栈开发者 · 设计师 · 创意工作者</p>
+      <p class="hero-desc">
+        热爱技术，专注于构建优雅的数字产品。<br/>
+        拥有 X 年经验，参与过 N 个项目。
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i> 查看成果
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-envelope"></i> 联系我
+        </a>
+      </div>
+      <div class="hero-social">
+        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-bilibili"></i></a>
+        <a href="#" target="_blank"><i class="fab fa-weixin"></i></a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>向下滚动</span>
+      <i class="fas fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ========== 关于我 ========== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About</span>
+        <h2>关于我</h2>
+        <p class="section-sub">了解更多关于我的背景和故事</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text fade-in">
+          <h3>一名充满热情的创作者</h3>
+          <p>
+            我是一名全栈开发者，拥有 X 年的 Web 开发经验。擅长
+            <strong>React、Vue、Node.js</strong> 等技术栈，对用户体验和
+            代码质量有极高的追求。
+          </p>
+          <p>
+            在工作之余，我喜欢参与开源项目、撰写技术博客、以及探索
+            新技术。我相信好的技术应该服务于人，创造真正的价值。
+          </p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number" data-target="5">0</span>
+              <span class="stat-label">年经验</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="30">0</span>
+              <span class="stat-label">完成项目</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-target="50">0</span>
+              <span class="stat-label">博客文章</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-skills fade-in">
+          <h3>技术栈</h3>
+          <div class="skill-group">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Vue</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Docker</span>
+            <span class="skill-tag">AWS</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">Tailwind CSS</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Figma</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 经历/时间线 ========== -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Experience</span>
+        <h2>我的经历</h2>
+        <p class="section-sub">教育背景与工作经历</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2024 - 至今</div>
+          <div class="timeline-content card">
+            <h3>高级前端工程师</h3>
+            <h4>某科技有限公司</h4>
+            <p>负责核心产品的前端架构设计，带领 5 人团队完成多个重要项目。</p>
+            <div class="timeline-tags">
+              <span>React</span><span>TypeScript</span><span>微前端</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2022 - 2024</div>
+          <div class="timeline-content card">
+            <h3>前端工程师</h3>
+            <h4>另一家科技有限公司</h4>
+            <p>参与公司 SaaS 产品的开发，优化性能 40%，获得年度优秀员工。</p>
+            <div class="timeline-tags">
+              <span>Vue</span><span>Node.js</span><span>Redis</span>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item fade-in">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2018 - 2022</div>
+          <div class="timeline-content card">
+            <h3>计算机科学 · 本科</h3>
+            <h4>某某大学</h4>
+            <p>GPA 3.8/4.0，获得国家奖学金，参与 ACM 竞赛获得省级银奖。</p>
+            <div class="timeline-tags">
+              <span>数据结构</span><span>算法</span><span>操作系统</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 成果/项目 ========== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Projects</span>
+        <h2>我的成果</h2>
+        <p class="section-sub">精选项目和作品</p>
+      </div>
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">全部</button>
+        <button class="filter-btn" data-filter="web">Web 应用</button>
+        <button class="filter-btn" data-filter="app">移动端</button>
+        <button class="filter-btn" data-filter="opensource">开源</button>
+      </div>
+      <div class="project-grid" id="projectGrid">
+        <!-- 项目卡片 1 -->
+        <div class="project-card fade-in" data-category="web">
+          <div class="project-img">
+            <img src="https://placehold.co/600x400/6366f1/ffffff?text=Project+1" alt="项目1" />
+            <div class="project-overlay">
+              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>电商管理后台</h3>
+            <p>基于 React + Ant Design 的全功能后台管理系统。</p>
+            <div class="project-tags">
+              <span>React</span><span>AntD</span><span>Node.js</span>
+            </div>
+          </div>
+        </div>
+        <!-- 项目卡片 2 -->
+        <div class="project-card fade-in" data-category="app">
+          <div class="project-img">
+            <img src="https://placehold.co/600x400/8b5cf6/ffffff?text=Project+2" alt="项目2" />
+            <div class="project-overlay">
+              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>运动健康 App</h3>
+            <p>Flutter 跨平台应用，记录运动数据并生成分析报告。</p>
+            <div class="project-tags">
+              <span>Flutter</span><span>Dart</span><span>Firebase</span>
+            </div>
+          </div>
+        </div>
+        <!-- 项目卡片 3 -->
+        <div class="project-card fade-in" data-category="opensource">
+          <div class="project-img">
+            <img src="https://placehold.co/600x400/ec4899/ffffff?text=Project+3" alt="项目3" />
+            <div class="project-overlay">
+              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>UI 组件库</h3>
+            <p>开源 Vue3 组件库，GitHub 2000+ Stars。</p>
+            <div class="project-tags">
+              <span>Vue3</span><span>TypeScript</span><span>Rollup</span>
+            </div>
+          </div>
+        </div>
+        <!-- 项目卡片 4 -->
+        <div class="project-card fade-in" data-category="web">
+          <div class="project-img">
+            <img src="https://placehold.co/600x400/14b8a6/ffffff?text=Project+4" alt="项目4" />
+            <div class="project-overlay">
+              <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+              <a href="#" class="project-github"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>AI 聊天助手</h3>
+            <p>集成 GPT API 的智能对话平台，支持多轮对话。</p>
+            <div class="project-tags">
+              <span>Next.js</span><span>OpenAI</span><span>Pinecone</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 图库 ========== -->
+  <section class="section section-alt" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Gallery</span>
+        <h2>图片集锦</h2>
+        <p class="section-sub">生活中的精彩瞬间</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item fade-in" onclick="openLightbox(this)">
+          <img src="https://placehold.co/800x600/6366f1/ffffff?text=Photo+1" alt="图片1" />
+          <div class="gallery-caption">会议演讲</div>
+        </div>
+        <div class="gallery-item fade-in" onclick="openLightbox(this)">
+          <img src="https://placehold.co/800x600/8b5cf6/ffffff?text=Photo+2" alt="图片2" />
+          <div class="gallery-caption">团队活动</div>
+        </div>
+        <div class="gallery-item fade-in" onclick="openLightbox(this)">
+          <img src="https://placehold.co/800x600/ec4899/ffffff?text=Photo+3" alt="图片3" />
+          <div class="gallery-caption">技术分享</div>
+        </div>
+        <div class="gallery-item fade-in" onclick="openLightbox(this)">
+          <img src="https://placehold.co/800x600/14b8a6/ffffff?text=Photo+4" alt="图片4" />
+          <div class="gallery-caption">工作日常</div>
+        </div>
+        <div class="gallery-item fade-in" onclick="openLightbox(this)">
+          <img src="https://placehold.co/800x600/f59e0b/ffffff?text=Photo+5" alt="图片5" />
+          <div class="gallery-caption">户外运动</div>
+        </div>
+        <div class="gallery-item fade-in" onclick="openLightbox(this)">
+          <img src="https://placehold.co/800x600/3b82f6/ffffff?text=Photo+6" alt="图片6" />
+          <div class="gallery-caption">获奖时刻</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 灯箱 -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img src="" alt="放大图片" id="lightboxImg" />
+  </div>
+
+  <!-- ========== 资源文件 ========== -->
+  <section class="section" id="files">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Resources</span>
+        <h2>资源下载</h2>
+        <p class="section-sub">个人简历、文档和作品文件</p>
+      </div>
+      <div class="files-grid">
+        <div class="file-card fade-in">
+          <div class="file-icon"><i class="fas fa-file-pdf"></i></div>
+          <div class="file-info">
+            <h3>个人简历</h3>
+            <p>PDF · 2.4 MB</p>
+          </div>
+          <a href="assets/files/resume.pdf" class="btn btn-sm" download>
+            <i class="fas fa-download"></i> 下载
+          </a>
+        </div>
+        <div class="file-card fade-in">
+          <div class="file-icon"><i class="fas fa-file-powerpoint"></i></div>
+          <div class="file-info">
+            <h3>技术分享 PPT</h3>
+            <p>PPTX · 5.1 MB</p>
+          </div>
+          <a href="assets/files/tech-share.pptx" class="btn btn-sm" download>
+            <i class="fas fa-download"></i> 下载
+          </a>
+        </div>
+        <div class="file-card fade-in">
+          <div class="file-icon"><i class="fas fa-file-archive"></i></div>
+          <div class="file-info">
+            <h3>项目源码包</h3>
+            <p>ZIP · 8.7 MB</p>
+          </div>
+          <a href="assets/files/project.zip" class="btn btn-sm" download>
+            <i class="fas fa-download"></i> 下载
+          </a>
+        </div>
+        <div class="file-card fade-in">
+          <div class="file-icon"><i class="fas fa-file-image"></i></div>
+          <div class="file-info">
+            <h3>作品集画册</h3>
+            <p>PDF · 12.3 MB</p>
+          </div>
+          <a href="assets/files/portfolio.pdf" class="btn btn-sm" download>
+            <i class="fas fa-download"></i> 下载
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 联系 ========== -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Contact</span>
+        <h2>联系我</h2>
+        <p class="section-sub">期待与您交流合作</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info fade-in">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>邮箱</h4>
+              <a href="mailto:yourname@example.com">yourname@example.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>位置</h4>
+              <p>中国 · 北京</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <div>
+              <h4>GitHub</h4>
+              <a href="#" target="_blank">github.com/yourname</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-bilibili"></i>
+            <div>
+              <h4>Bilibili</h4>
+              <a href="#" target="_blank">space.bilibili.com/yourid</a>
+            </div>
+          </div>
+        </div>
+        <form class="contact-form fade-in" id="contactForm">
+          <div class="form-row">
+            <input type="text" placeholder="您的姓名" required />
+            <input type="email" placeholder="您的邮箱" required />
+          </div>
+          <input type="text" placeholder="主题" />
+          <textarea rows="5" placeholder="留言内容..."></textarea>
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-paper-plane"></i> 发送留言
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 页脚 ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <h3>Portfolio.</h3>
+          <p>用心创造，持续学习。</p>
+        </div>
+        <div class="footer-links">
+          <h4>快捷导航</h4>
+          <a href="#hero">首页</a>
+          <a href="#about">关于</a>
+          <a href="#experience">经历</a>
+          <a href="#projects">成果</a>
+        </div>
+        <div class="footer-social">
+          <h4>社交平台</h4>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-bilibili"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 你的名字. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 回到顶部 -->
+  <button class="back-to-top" id="backToTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
