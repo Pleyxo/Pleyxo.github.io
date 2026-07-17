@@ -169,6 +169,21 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeLightbox();
 });
 
+// ========== 微信点击显示微信号 ==========
+function showWechat() {
+  const wechatId = 'Pleyxo';
+  // 尝试复制到剪贴板
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(wechatId).then(() => {
+      showToast('✅ WeChat ID: ' + wechatId + ' (已复制)');
+    }).catch(() => {
+      showToast('💬 WeChat ID: ' + wechatId);
+    });
+  } else {
+    showToast('💬 WeChat ID: ' + wechatId);
+  }
+}
+
 // ========== 回到顶部按钮 ==========
 backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
