@@ -434,17 +434,19 @@
             </div>
           </div>
         </div>
-        <form class="contact-form fade-in" id="contactForm">
-          <div class="form-row">
-            <input type="text" placeholder="Your Name" required data-i18n-placeholder="contact-form-name" />
-            <input type="email" placeholder="Your Email" required data-i18n-placeholder="contact-form-email" />
+        <div class="contact-copy fade-in" id="contactCopy">
+          <div class="contact-copy-card">
+            <div class="contact-copy-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h4 data-i18n="contact-copy-title">Email</h4>
+            <p class="contact-copy-email">3023445006@qq.com</p>
+            <p class="contact-copy-hint" data-i18n="contact-copy-hint">Click the button below to copy my email</p>
+            <button class="btn btn-primary" id="copyEmailBtn">
+              <i class="fas fa-copy"></i> <span data-i18n="contact-copy-btn">Copy Email</span>
+            </button>
           </div>
-          <input type="text" placeholder="Subject" data-i18n-placeholder="contact-form-subject" />
-          <textarea rows="5" placeholder="Your Message..." data-i18n-placeholder="contact-form-message"></textarea>
-          <button type="submit" class="btn btn-primary">
-            <i class="fas fa-paper-plane"></i> <span data-i18n="contact-form-btn">Send Message</span>
-          </button>
-        </form>
+        </div>
       </div>
     </div>
   </section>

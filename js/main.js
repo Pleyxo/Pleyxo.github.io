@@ -10,7 +10,6 @@ const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
-const contactForm = document.getElementById('contactForm');
 
 // ========== 当前语言 (默认英文) ==========
 let currentLang = 'en';
@@ -189,15 +188,20 @@ backToTop.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// ========== 联系方式表单 ==========
-if (contactForm) {
-  contactForm.addEventListener('submit', e => {
-    e.preventDefault();
-    const successKey = currentLang === 'en'
-      ? 'contact-form-success'
-      : 'contact-form-success';
-    showToast('✅ ' + (translations[currentLang]['contact-form-success'] || 'Message sent! Thank you!'));
-    contactForm.reset();
+// ========== 复制邮箱 ==========
+const copyEmailBtn = document.getElementById('copyEmailBtn');
+if (copyEmailBtn) {
+  copyEmailBtn.addEventListener('click', () => {
+    const email = '3023445006@qq.com';
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email).then(() => {
+        showToast('✅ ' + (translations[currentLang]['contact-copy-success'] || 'Email copied!'));
+      }).catch(() => {
+        showToast('💬 ' + email);
+      });
+    } else {
+      showToast('💬 ' + email);
+    }
   });
 }
 
