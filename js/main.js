@@ -19,6 +19,13 @@ if (researchSection && honorsSection && experienceSection) {
   experienceSection.before(researchSection, honorsSection);
 }
 
+// Place the personal experience section immediately before the gallery.
+const organizationSection = document.getElementById('org-section');
+const gallerySection = document.getElementById('gallery');
+if (organizationSection && gallerySection) {
+  gallerySection.before(organizationSection);
+}
+
 // ========== 当前语言 (默认英文) ==========
 let currentLang = 'en';
 
