@@ -812,37 +812,164 @@ tbody td:nth-child(2) { min-width: 160px; }
   line-height: 1.6;
 }
 
-/* ========== 奖项卡片（移动端） ========== */
-.award-card-list { display: none; flex-direction: column; gap: 16px; }
-.award-card {
+/* ========== 科研成果 ========== */
+.research-list {
+  display: grid;
+  gap: 32px;
+}
+.research-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 24px;
+  padding: 32px;
   box-shadow: var(--shadow);
   transition: var(--transition);
+  overflow: hidden;
 }
-.award-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
-.award-badge { font-size: 2rem; margin-bottom: 8px; }
-.award-card h3 { font-size: 1.05rem; margin-bottom: 4px; }
-.award-sub { color: var(--text-light); font-size: .88rem; margin-bottom: 12px; }
-.award-meta { display: flex; gap: 16px; margin-bottom: 8px; flex-wrap: wrap; }
-.award-meta span {
-  font-size: .85rem;
-  color: var(--text-light);
+.research-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+.research-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding-bottom: 22px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+.research-index {
+  width: 48px;
+  height: 48px;
   display: flex;
   align-items: center;
-  gap: 4px;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 14px;
+  color: #fff;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  box-shadow: 0 8px 20px rgba(99,102,241,.22);
 }
-.award-meta i { color: var(--primary); width: 14px; }
-.award-org {
-  font-size: .85rem;
-  color: var(--primary);
-  font-weight: 500;
-  padding: 4px 12px;
-  background: rgba(99,102,241,.08);
-  border-radius: 6px;
+.research-venue {
   display: inline-block;
+  color: var(--primary);
+  font-size: .8rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  margin-bottom: 7px;
+}
+.research-card h3 {
+  margin: 0;
+  font-size: 1.28rem;
+  line-height: 1.45;
+}
+.research-copy h4 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: .95rem;
+}
+.research-copy h4 i { color: var(--primary); }
+.research-copy p {
+  margin: 0;
+  color: var(--text-light);
+  font-size: .94rem;
+  line-height: 1.82;
+  text-align: justify;
+}
+.research-keywords {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 18px;
+  padding: 13px 16px;
+  background: rgba(99,102,241,.08);
+  border-radius: 10px;
+  color: var(--text-light);
+  font-size: .88rem;
+  line-height: 1.6;
+}
+.research-keywords strong {
+  color: var(--primary);
+  white-space: nowrap;
+}
+.research-keywords strong::after { content: ':'; }
+.research-figures {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 26px;
+}
+.research-figure {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+  cursor: zoom-in;
+  transition: var(--transition);
+}
+.research-figure:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.research-figure img {
+  display: block;
+  width: 100%;
+  height: 270px;
+  object-fit: contain;
+  background: #fff;
+}
+.research-figure figcaption {
+  padding: 10px 14px;
+  border-top: 1px solid var(--border);
+  color: var(--text-light);
+  font-size: .82rem;
+  text-align: center;
+  background: var(--surface);
+}
+.research-honors {
+  margin-top: 32px;
+  padding: 26px 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, rgba(99,102,241,.07), rgba(139,92,246,.04));
+}
+.research-honors > h3 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 18px;
+  font-size: 1.05rem;
+}
+.research-honors > h3 i { color: var(--primary); }
+.honors-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.honor-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 17px 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.honor-icon { font-size: 1.55rem; flex-shrink: 0; }
+.honor-item strong {
+  display: block;
+  font-size: .9rem;
+  line-height: 1.45;
+}
+.honor-item p {
+  margin: 5px 0 0;
+  color: var(--text-light);
+  font-size: .82rem;
 }
 
 /* ========== 学生工作卡片 ========== */
@@ -885,7 +1012,15 @@ tbody td:nth-child(2) { min-width: 160px; }
 @media (max-width: 768px) {
   .table-wrapper { display: none; }
   .project-card-list { display: flex; }
-  .award-card-list { display: flex; }
+  .research-card { padding: 22px; }
+  .research-card-header { gap: 14px; }
+  .research-card h3 { font-size: 1.08rem; }
+  .research-copy p { text-align: left; }
+  .research-figures { grid-template-columns: 1fr; }
+  .research-figure img { height: auto; max-height: 360px; }
+  .research-keywords { flex-direction: column; gap: 4px; }
+  .research-honors { padding: 20px; }
+  .honors-grid { grid-template-columns: 1fr; }
   .org-card { flex-direction: column; align-items: center; text-align: center; }
   .org-meta { justify-content: center; }
 }
@@ -907,14 +1042,6 @@ tbody td:nth-child(2) { min-width: 160px; }
 .lang-toggle:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(99,102,241,.35);
-}
-
-/* Award sub detail for mobile cards */
-.award-sub-detail {
-  color: var(--text-light);
-  font-size: .88rem;
-  margin-bottom: 12px;
-  min-height: 1.2em;
 }
 
 /* WeChat clickable cursor */
