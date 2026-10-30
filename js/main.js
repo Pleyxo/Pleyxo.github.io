@@ -11,6 +11,14 @@ const lightboxImg = document.getElementById('lightboxImg');
 const filterBtns = document.querySelectorAll('.filter-btn');
 const projectCards = document.querySelectorAll('.project-card');
 
+// Keep the primary portfolio sections in the requested display order.
+const researchSection = document.getElementById('research');
+const honorsSection = document.getElementById('honors');
+const experienceSection = document.getElementById('experience');
+if (researchSection && honorsSection && experienceSection) {
+  experienceSection.before(researchSection, honorsSection);
+}
+
 // ========== 当前语言 (默认英文) ==========
 let currentLang = 'en';
 

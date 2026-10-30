@@ -16,8 +16,9 @@
       <ul class="nav-menu" id="navMenu">
         <li><a href="#hero" class="nav-link active" data-i18n="nav-home">Home</a></li>
         <li><a href="#about" class="nav-link" data-i18n="nav-about">About</a></li>
-        <li><a href="#experience" class="nav-link" data-i18n="nav-experience">Projects</a></li>
         <li><a href="#research" class="nav-link" data-i18n="nav-research">Research</a></li>
+        <li><a href="#honors" class="nav-link" data-i18n="nav-honors">Honors</a></li>
+        <li><a href="#experience" class="nav-link" data-i18n="nav-experience">Projects</a></li>
         <li><a href="#gallery" class="nav-link" data-i18n="nav-gallery">Gallery</a></li>
         <li><a href="#org-section" class="nav-link" data-i18n="nav-resources">Resources</a></li>
         <li><a href="#contact" class="nav-link" data-i18n="nav-contact">Contact</a></li>
@@ -88,7 +89,7 @@
               <span class="stat-label" data-i18n="about-stat1-label">Projects</span>
             </div>
             <div class="stat-item">
-              <span class="stat-number" data-target="2">0</span>
+              <span class="stat-number" data-target="9">0</span>
               <span class="stat-label" data-i18n="about-stat2-label">Awards</span>
             </div>
             <div class="stat-item">
@@ -115,7 +116,7 @@
   </section>
 
   <!-- ========== 项目经历 ========== -->
-  <section class="section section-alt" id="experience">
+  <section class="section" id="experience">
     <div class="container">
       <div class="section-header">
         <span class="section-tag" data-i18n="exp-tag">Projects</span>
@@ -255,24 +256,54 @@
         </article>
       </div>
 
-      <div class="research-honors fade-in">
-        <h3><i class="fas fa-award"></i> <span data-i18n="honors-title">Selected Competition Honors</span></h3>
-        <div class="honors-grid">
-          <div class="honor-item">
-            <span class="honor-icon">🏆</span>
-            <div>
-              <strong data-i18n="honor-1-name">15th Marine Vehicle Design Contest (Qilu) — C2 Shore Fire Support</strong>
-              <p><span data-i18n="honor-1-level">Regional (Qilu)</span> · <span data-i18n="honor-1-date">2026.7.9</span></p>
-            </div>
-          </div>
-          <div class="honor-item">
-            <span class="honor-icon">🎓</span>
-            <div>
-              <strong data-i18n="honor-2-name">16th China Undergraduate Physics Tournament</strong>
-              <p><span data-i18n="honor-2-level">National</span> · <span data-i18n="honor-2-date">2025.8.25</span></p>
-            </div>
-          </div>
-        </div>
+    </div>
+  </section>
+
+  <!-- ========== 获奖荣誉 ========== -->
+  <section class="section section-alt" id="honors">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="honors-tag">Honors</span>
+        <h2 data-i18n="honors-title">Awards &amp; Honors</h2>
+        <p class="section-sub" data-i18n="honors-sub">Competition awards, scholarships, academic recognition, and appointments</p>
+      </div>
+      <div class="honor-gallery">
+        <article class="honor-card fade-in" onclick="openLightbox(this)">
+          <img src="assets/images/honors/cupt-first-prize-2025.jpg" alt="CUPT First Prize certificate" loading="lazy" />
+          <div class="honor-card-copy"><span class="honor-badge" data-i18n="honor-1-level">National · First Prize</span><h3 data-i18n="honor-1-name">16th China Undergraduate Physics Tournament — First Prize</h3><p data-i18n="honor-1-date">August 2025</p></div>
+        </article>
+        <article class="honor-card fade-in" onclick="openLightbox(this)">
+          <img src="assets/images/honors/cupt-best-style-2025.jpg" alt="CUPT Best Style Award certificate" loading="lazy" />
+          <div class="honor-card-copy"><span class="honor-badge" data-i18n="honor-2-level">National · Special Award</span><h3 data-i18n="honor-2-name">16th China Undergraduate Physics Tournament — Best Style Award</h3><p data-i18n="honor-2-date">August 2025</p></div>
+        </article>
+        <article class="honor-card fade-in" onclick="openLightbox(this)">
+          <img src="assets/images/honors/marine-vehicle-second-prize-2026.jpg" alt="Marine Vehicle Contest Second Prize certificate" loading="lazy" />
+          <div class="honor-card-copy"><span class="honor-badge" data-i18n="honor-3-level">National · Second Prize</span><h3 data-i18n="honor-3-name">15th China Marine Vehicle Design and Construction Contest — C2 Shore Fire Support</h3><p data-i18n="honor-3-date">August 2026</p></div>
+        </article>
+        <article class="honor-card fade-in" onclick="openLightbox(this)">
+          <img src="assets/images/honors/first-grade-scholarship-2025.jpg" alt="First Grade Scholarship certificate" loading="lazy" />
+          <div class="honor-card-copy"><span class="honor-badge" data-i18n="honor-4-level">University · First Grade</span><h3 data-i18n="honor-4-name">2024–2025 Academic Year First Grade Scholarship</h3><p data-i18n="honor-4-date">December 2025</p></div>
+        </article>
+        <article class="honor-card fade-in" onclick="openLightbox(this)">
+          <img src="assets/images/honors/second-grade-scholarship-2026.jpg" alt="Second Grade Scholarship certificate" loading="lazy" />
+          <div class="honor-card-copy"><span class="honor-badge" data-i18n="honor-5-level">University · Second Grade</span><h3 data-i18n="honor-5-name">2025–2026 Academic Year Second Grade Scholarship</h3><p data-i18n="honor-5-date">June 2026</p></div>
+        </article>
+        <article class="honor-card fade-in" onclick="openLightbox(this)">
+          <img src="assets/images/honors/outstanding-league-member-2026.jpg" alt="Outstanding League Member certificate" loading="lazy" />
+          <div class="honor-card-copy"><span class="honor-badge" data-i18n="honor-6-level">University Honor</span><h3 data-i18n="honor-6-name">2025–2026 Outstanding Youth League Member — Self-Improvement Award</h3><p data-i18n="honor-6-date">May 2026</p></div>
+        </article>
+        <article class="honor-card fade-in" onclick="openLightbox(this)">
+          <img src="assets/images/honors/pslaf-oral-presentation-2026.jpg" alt="PS-LAF Oral Presentation certificate" loading="lazy" />
+          <div class="honor-card-copy"><span class="honor-badge" data-i18n="honor-7-level">International Conference</span><h3 data-i18n="honor-7-name">PS-LAF 2026 Certificate of Oral Presentation</h3><p data-i18n="honor-7-date">September 2026</p></div>
+        </article>
+        <article class="honor-card fade-in" onclick="openLightbox(this)">
+          <img src="assets/images/honors/laser-communications-lab-appointment-2026.jpg" alt="Laser Communication Laboratory appointment" loading="lazy" />
+          <div class="honor-card-copy"><span class="honor-badge" data-i18n="honor-8-level">Research Appointment</span><h3 data-i18n="honor-8-name">Software Lead, Laser Communication Laboratory</h3><p data-i18n="honor-8-date">September 2026 – September 2027</p></div>
+        </article>
+        <article class="honor-card fade-in" onclick="openLightbox(this)">
+          <img src="assets/images/honors/outstanding-student-union-officer-2025.jpg" alt="Outstanding Student Union Officer certificate" loading="lazy" />
+          <div class="honor-card-copy"><span class="honor-badge" data-i18n="honor-9-level">Student Service Honor</span><h3 data-i18n="honor-9-name">Student Union Outstanding Officer</h3><p data-i18n="honor-9-date">May 2025</p></div>
+        </article>
       </div>
     </div>
   </section>
@@ -446,8 +477,9 @@
           <h4 data-i18n="footer-nav-title">Quick Links</h4>
           <a href="#hero" data-i18n="nav-home">Home</a>
           <a href="#about" data-i18n="nav-about">About</a>
-          <a href="#experience" data-i18n="nav-experience">Projects</a>
           <a href="#research" data-i18n="nav-research">Research</a>
+          <a href="#honors" data-i18n="nav-honors">Honors</a>
+          <a href="#experience" data-i18n="nav-experience">Projects</a>
         </div>
         <div class="footer-social">
           <h4 data-i18n="footer-social-title">Contact</h4>
