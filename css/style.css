@@ -811,6 +811,16 @@ tbody td:nth-child(2) { min-width: 160px; }
   margin-top: 6px;
   line-height: 1.6;
 }
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 9px;
+  color: var(--primary);
+  font-size: .86rem;
+  font-weight: 700;
+}
+.project-link:hover { text-decoration: underline; }
 
 /* ========== 科研成果 ========== */
 .research-list {
@@ -851,13 +861,39 @@ tbody td:nth-child(2) { min-width: 160px; }
   background: linear-gradient(135deg, var(--primary), var(--secondary));
   box-shadow: 0 8px 20px rgba(99,102,241,.22);
 }
+.research-meta {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  flex-wrap: wrap;
+  margin-bottom: 7px;
+}
 .research-venue {
   display: inline-block;
   color: var(--primary);
   font-size: .8rem;
   font-weight: 800;
   letter-spacing: .08em;
-  margin-bottom: 7px;
+}
+.research-status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  padding: 3px 9px;
+  border-radius: 6px;
+  font-size: .75rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.research-status-submitted {
+  color: #9a6700;
+  background: rgba(245,158,11,.14);
+  border: 1px solid rgba(245,158,11,.3);
+}
+.research-status-accepted {
+  color: #087f5b;
+  background: rgba(16,185,129,.13);
+  border: 1px solid rgba(16,185,129,.28);
 }
 .research-card h3 {
   margin: 0;
