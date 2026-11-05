@@ -460,6 +460,43 @@ ul { list-style: none; }
 }
 .lightbox-close:hover { opacity: .7; }
 
+/* ========== 资源下载 ========== */
+.resume-resource {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.resume-preview {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--surface);
+  box-shadow: var(--shadow-lg);
+  cursor: zoom-in;
+}
+.resume-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.resume-download {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 20px;
+  padding: 22px 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+.resume-download h3 { font-size: 1.05rem; margin-bottom: 4px; }
+.resume-download p { color: var(--text-light); font-size: .88rem; }
+.resume-download .btn { flex-shrink: 0; }
+
 /* ========== 联系 ========== */
 .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 48px; }
 .contact-info { display: flex; flex-direction: column; gap: 28px; }
@@ -648,6 +685,8 @@ ul { list-style: none; }
   .nav-right { gap: 6px; }
   .lang-toggle { padding: 4px 10px; font-size: .75rem; }
   .nav-toggle span { width: 22px; }
+  .resume-download { align-items: stretch; flex-direction: column; }
+  .resume-download .btn { width: 100%; }
 }
 
 /* ========== Toast 提示 ========== */

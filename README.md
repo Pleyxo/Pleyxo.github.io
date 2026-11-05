@@ -58,10 +58,12 @@ git push origin main
 │   ├── main.js               # 中英文切换、区块顺序、动画、灯箱和联系方式
 │   └── translations.js       # 所有中英文文字
 └── assets/
-    └── images/
-        ├── avatar.jpg        # 头像
-        ├── research/         # 科研成果图片
-        └── honors/           # 获奖证书图片
+    ├── images/
+    │   ├── avatar.jpg        # 头像
+    │   ├── research/         # 科研成果图片
+    │   └── honors/           # 获奖证书图片
+    └── files/
+        └── resume.jpg        # 网页展示并提供下载的个人简历
 ```
 
 ## 3. 修改文字时最重要的规则
@@ -236,6 +238,16 @@ assets/images/honors/
 <img src="assets/images/honors/your-certificate.jpg" alt="Certificate" />
 ```
 
+### 5.4 更换个人简历
+
+将新的简历图片命名为 `resume.jpg`，覆盖：
+
+```text
+assets/files/resume.jpg
+```
+
+简历会在 `#resources` 区域中直接展示，并通过同一文件提供下载。若使用其他文件名或 PDF，需要同步修改 `index.html` 中简历预览的 `src` 和下载按钮的 `href`。下载按钮上的 `download` 属性可指定访客保存时看到的默认文件名。
+
 ## 6. 修改科研成果
 
 科研成果位于 `index.html` 的：
@@ -344,7 +356,7 @@ assets/images/honors/
 
 证书卡片已经绑定点击放大功能，不需要额外编写 JavaScript。
 
-## 9. 修改“经历”区域
+## 9. 修改“经历”和“资源下载”区域
 
 校园或组织经历位于 `#org-section`，主要翻译键包括：
 
@@ -355,6 +367,8 @@ org-location
 org-role
 org-achievement
 ```
+
+资源下载区域位于 `#resources`，对应翻译键以 `resources-` 开头。简历文件存放在 `assets/files/resume.jpg`。
 
 ## 10. 调整页面区块顺序
 
@@ -369,7 +383,7 @@ experienceSection.before(researchSection, honorsSection);
 当前主要顺序是：
 
 ```text
-科研成果 → 获奖荣誉 → 项目经历 → 经历 → 联系
+科研成果 → 获奖荣誉 → 项目经历 → 经历 → 资源下载 → 联系
 ```
 
 如果只移动 HTML，而没有检查这几行 JavaScript，页面加载后可能会被重新排序。调整区块顺序时，应同时修改或删除对应的 DOM 排序代码，并同步调整导航栏顺序。
@@ -412,6 +426,7 @@ experienceSection.before(researchSection, honorsSection);
 - [ ] 项目经历的桌面表格和移动端卡片均已修改
 - [ ] 荣誉证书图片和文字已替换
 - [ ] 首页统计数字与实际条目数量一致
+- [ ] 简历预览正常，下载按钮可以保存文件
 - [ ] 中文和英文翻译键保持一致
 - [ ] 所有图片路径区分大小写并与实际文件名完全一致
 
@@ -452,5 +467,6 @@ GitHub Pages 通常需要短暂时间重新部署。可在仓库的 `Actions` �
 2. `index.html`：姓名、联系方式、链接、图片路径和新增卡片结构。
 3. `js/main.js`：页面标题、微信号、复制邮箱和区块顺序。
 4. `assets/images/`：头像、科研图片和证书。
+5. `assets/files/`：个人简历等可下载文件。
 
 修改完成后提交到 `main` 分支，GitHub Pages 会自动更新主页。

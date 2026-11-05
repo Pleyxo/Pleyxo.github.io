@@ -11,6 +11,7 @@ const translations = {
     "nav-research": "Research",
     "nav-honors": "Honors",
     "nav-organization": "Experience",
+    "nav-resources": "Resources",
     "nav-contact": "Contact",
 
     // ===== Hero =====
@@ -147,6 +148,14 @@ const translations = {
     "org-achievement-label": "Achievement",
     "org-achievement": "Student Union \"Outstanding Member\"",
 
+    // ===== Resources =====
+    "resources-tag": "Resources",
+    "resources-title": "Resume",
+    "resources-sub": "Preview or download my resume",
+    "resources-file-name": "Xiuyi Yang - Resume",
+    "resources-file-meta": "JPG image · Click the preview to enlarge",
+    "resources-download": "Download Resume",
+
     // ===== Contact =====
     "contact-tag": "Contact",
     "contact-title": "Contact Me",
@@ -183,6 +192,7 @@ const translations = {
     "nav-research": "科研成果",
     "nav-honors": "获奖荣誉",
     "nav-organization": "经历",
+    "nav-resources": "资源下载",
     "nav-contact": "联系",
 
     "hero-greeting": "你好，我是",
@@ -312,6 +322,13 @@ const translations = {
     "org-role": "部员",
     "org-achievement-label": "取得成就",
     "org-achievement": "学生会\"优秀干事\"",
+
+    "resources-tag": "资源下载",
+    "resources-title": "个人简历",
+    "resources-sub": "在线查看或下载我的个人简历",
+    "resources-file-name": "杨修一 - 个人简历",
+    "resources-file-meta": "JPG 图片 · 点击预览图可放大查看",
+    "resources-download": "下载个人简历",
 
     "contact-tag": "联系",
     "contact-title": "联系我",
