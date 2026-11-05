@@ -63,7 +63,8 @@ git push origin main
     │   ├── research/         # 科研成果图片
     │   └── honors/           # 获奖证书图片
     └── files/
-        └── resume.jpg        # 网页展示并提供下载的个人简历
+        ├── resume.jpg        # 页面中的简历预览图
+        └── resume.pdf        # 提供给访客下载的 PDF 简历
 ```
 
 ## 3. 修改文字时最重要的规则
@@ -240,13 +241,14 @@ assets/images/honors/
 
 ### 5.4 更换个人简历
 
-将新的简历图片命名为 `resume.jpg`，覆盖：
+将新的简历预览图和 PDF 分别命名为 `resume.jpg`、`resume.pdf`，覆盖：
 
 ```text
 assets/files/resume.jpg
+assets/files/resume.pdf
 ```
 
-简历会在 `#resources` 区域中直接展示，并通过同一文件提供下载。若使用其他文件名或 PDF，需要同步修改 `index.html` 中简历预览的 `src` 和下载按钮的 `href`。下载按钮上的 `download` 属性可指定访客保存时看到的默认文件名。
+简历图片会在 `#resources` 区域中以卡片形式展示，点击后可放大；下方按钮下载 PDF。若使用其他文件名，需要同步修改 `index.html` 中简历图片的 `src` 和下载按钮的 `href`。下载按钮上的 `download` 属性可指定访客保存时看到的默认文件名。
 
 ## 6. 修改科研成果
 
@@ -368,7 +370,7 @@ org-role
 org-achievement
 ```
 
-资源下载区域位于 `#resources`，对应翻译键以 `resources-` 开头。简历文件存放在 `assets/files/resume.jpg`。
+资源下载区域位于 `#resources`，对应翻译键以 `resources-` 开头。预览图片和下载文件分别存放在 `assets/files/resume.jpg`、`assets/files/resume.pdf`。
 
 ## 10. 调整页面区块顺序
 

@@ -373,20 +373,19 @@
         <h2 data-i18n="resources-title">Resume</h2>
         <p class="section-sub" data-i18n="resources-sub">Preview or download my resume</p>
       </div>
-      <div class="resume-resource fade-in">
-        <button class="resume-preview" type="button" onclick="openLightbox(this)" aria-label="Open resume preview">
+      <div class="resume-resource">
+        <article class="honor-card resume-card fade-in" onclick="openLightbox(this)">
           <img src="assets/files/resume.jpg" alt="Xiuyi Yang resume" loading="lazy" />
-        </button>
-        <div class="resume-download">
-          <div>
+          <div class="honor-card-copy">
+            <span class="honor-badge" data-i18n="resources-badge">Resume</span>
             <h3 data-i18n="resources-file-name">Xiuyi Yang - Resume</h3>
-            <p data-i18n="resources-file-meta">JPG image · Click the preview to enlarge</p>
+            <p data-i18n="resources-file-meta">Click the image to enlarge</p>
           </div>
-          <a class="btn btn-primary" href="assets/files/resume.jpg" download="Xiuyi-Yang-Resume.jpg">
-            <i class="fas fa-download"></i>
-            <span data-i18n="resources-download">Download Resume</span>
-          </a>
-        </div>
+        </article>
+        <a class="btn btn-primary resume-download" href="assets/files/resume.pdf" download="Xiuyi-Yang-Resume.pdf">
+          <i class="fas fa-file-pdf"></i>
+          <span data-i18n="resources-download">Download PDF Resume</span>
+        </a>
       </div>
     </div>
   </section>

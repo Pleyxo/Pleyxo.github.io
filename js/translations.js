@@ -152,9 +152,10 @@ const translations = {
     "resources-tag": "Resources",
     "resources-title": "Resume",
     "resources-sub": "Preview or download my resume",
+    "resources-badge": "Resume",
     "resources-file-name": "Xiuyi Yang - Resume",
-    "resources-file-meta": "JPG image · Click the preview to enlarge",
-    "resources-download": "Download Resume",
+    "resources-file-meta": "Click the image to enlarge",
+    "resources-download": "Download PDF Resume",
 
     // ===== Contact =====
     "contact-tag": "Contact",
@@ -326,9 +327,10 @@ const translations = {
     "resources-tag": "资源下载",
     "resources-title": "个人简历",
     "resources-sub": "在线查看或下载我的个人简历",
+    "resources-badge": "个人简历",
     "resources-file-name": "杨修一 - 个人简历",
-    "resources-file-meta": "JPG 图片 · 点击预览图可放大查看",
-    "resources-download": "下载个人简历",
+    "resources-file-meta": "点击图片可放大查看",
+    "resources-download": "下载 PDF 简历",
 
     "contact-tag": "联系",
     "contact-title": "联系我",
