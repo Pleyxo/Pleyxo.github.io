@@ -155,7 +155,8 @@ const translations = {
     "resources-badge": "Resume",
     "resources-file-name": "Xiuyi Yang - Resume",
     "resources-file-meta": "Click the image to enlarge",
-    "resources-download": "Download PDF Resume",
+    "resources-download-jpg": "Xiuyi Yang - Resume JPG Download",
+    "resources-download-pdf": "Xiuyi Yang - Resume PDF Download",
 
     // ===== Contact =====
     "contact-tag": "Contact",
@@ -330,7 +331,8 @@ const translations = {
     "resources-badge": "个人简历",
     "resources-file-name": "杨修一 - 个人简历",
     "resources-file-meta": "点击图片可放大查看",
-    "resources-download": "下载 PDF 简历",
+    "resources-download-jpg": "杨修一 - 个人简历   JPG图片下载",
+    "resources-download-pdf": "杨修一 - 个人简历   PDF文件下载",
 
     "contact-tag": "联系",
     "contact-title": "联系我",

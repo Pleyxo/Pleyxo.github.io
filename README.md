@@ -248,7 +248,7 @@ assets/files/resume.jpg
 assets/files/resume.pdf
 ```
 
-简历图片会在 `#resources` 区域中以卡片形式展示，点击后可放大；下方按钮下载 PDF。若使用其他文件名，需要同步修改 `index.html` 中简历图片的 `src` 和下载按钮的 `href`。下载按钮上的 `download` 属性可指定访客保存时看到的默认文件名。
+简历图片会在 `#resources` 区域中以卡片形式展示，点击后可放大；卡片下方分别提供 JPG 图片和 PDF 文件下载按钮。若使用其他文件名，需要同步修改 `index.html` 中简历图片的 `src`、两个下载按钮的 `href` 以及对应的 `download` 文件名。下载按钮上的 `download` 属性可指定访客保存时看到的默认文件名。
 
 ## 6. 修改科研成果
 

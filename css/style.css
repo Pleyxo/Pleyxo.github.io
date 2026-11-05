@@ -465,21 +465,33 @@ ul { list-style: none; }
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 380px;
+  max-width: 760px;
   margin: 0 auto;
 }
 .honor-card.resume-card {
-  width: 100%;
+  width: min(100%, 380px);
 }
 .honor-card.resume-card img {
   height: auto;
   max-height: 510px;
   object-fit: contain;
 }
-.resume-download {
+.resume-downloads {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
   width: 100%;
   margin-top: 20px;
+}
+.resume-download {
+  width: 100%;
   justify-content: center;
+  text-align: center;
+}
+@media (max-width: 680px) {
+  .resume-downloads {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ========== 联系 ========== */
