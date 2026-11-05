@@ -10,8 +10,7 @@ const translations = {
     "nav-experience": "Projects",
     "nav-research": "Research",
     "nav-honors": "Honors",
-    "nav-gallery": "Gallery",
-    "nav-resources": "Experience",
+    "nav-organization": "Experience",
     "nav-contact": "Contact",
 
     // ===== Hero =====
@@ -136,17 +135,6 @@ const translations = {
     "honor-9-level": "Student Service Honor",
     "honor-9-date": "May 2025",
 
-    // ===== Gallery =====
-    "gallery-tag": "Gallery",
-    "gallery-title": "Moments",
-    "gallery-sub": "Competition and campus life highlights",
-    "gallery-cap1": "2024 E-Design Contest — Problem E",
-    "gallery-cap2": "2024 E-Design Contest — Problem H",
-    "gallery-cap3": "Smart Boat — C2 Fire Support",
-    "gallery-cap4": "China Undergraduate Physics Tournament",
-    "gallery-cap5": "School Student Union",
-    "gallery-cap6": "HIT (Weihai) Campus",
-
     // ===== Student Work =====
     "org-tag": "Experience",
     "org-title": "Student Organizations",
@@ -158,15 +146,6 @@ const translations = {
     "org-role": "Member",
     "org-achievement-label": "Achievement",
     "org-achievement": "Student Union \"Outstanding Member\"",
-
-    // ===== Resources =====
-    "res-tag": "Resources",
-    "res-title": "Downloads",
-    "res-sub": "Resume and project files",
-    "res-file1-name": "Resume / CV",
-    "res-file1-type": "PDF File",
-    "res-file2-name": "Project Source Code",
-    "res-file2-type": "ZIP Archive",
 
     // ===== Contact =====
     "contact-tag": "Contact",
@@ -203,8 +182,7 @@ const translations = {
     "nav-experience": "项目经历",
     "nav-research": "科研成果",
     "nav-honors": "获奖荣誉",
-    "nav-gallery": "图库",
-    "nav-resources": "经历",
+    "nav-organization": "经历",
     "nav-contact": "联系",
 
     "hero-greeting": "你好，我是",
@@ -324,16 +302,6 @@ const translations = {
     "honor-9-level": "学生工作荣誉",
     "honor-9-date": "2025年5月",
 
-    "gallery-tag": "图库",
-    "gallery-title": "精彩瞬间",
-    "gallery-sub": "竞赛与校园生活剪影",
-    "gallery-cap1": "2024 电赛 E 题",
-    "gallery-cap2": "2024 电赛 H 题",
-    "gallery-cap3": "智能船 - C2 模拟对岸火力支援",
-    "gallery-cap4": "第十六届中国大学生物理学术竞赛",
-    "gallery-cap5": "信息科学与工程学院学生会",
-    "gallery-cap6": "哈尔滨工业大学（威海）",
-
     "org-tag": "学生工作",
     "org-title": "学生工作",
     "org-sub": "校园组织与服务经历",
@@ -344,14 +312,6 @@ const translations = {
     "org-role": "部员",
     "org-achievement-label": "取得成就",
     "org-achievement": "学生会\"优秀干事\"",
-
-    "res-tag": "资源下载",
-    "res-title": "资源下载",
-    "res-sub": "个人简历与项目文件",
-    "res-file1-name": "个人简历",
-    "res-file1-type": "PDF 文件",
-    "res-file2-name": "项目源码",
-    "res-file2-type": "ZIP 压缩包",
 
     "contact-tag": "联系",
     "contact-title": "联系我",

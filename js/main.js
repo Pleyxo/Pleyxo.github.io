@@ -19,13 +19,6 @@ if (researchSection && honorsSection && experienceSection) {
   experienceSection.before(researchSection, honorsSection);
 }
 
-// Place the personal experience section immediately before the gallery.
-const organizationSection = document.getElementById('org-section');
-const gallerySection = document.getElementById('gallery');
-if (organizationSection && gallerySection) {
-  gallerySection.before(organizationSection);
-}
-
 // ========== 当前语言 (默认英文) ==========
 let currentLang = 'en';
 
@@ -166,7 +159,7 @@ filterBtns.forEach(btn => {
   });
 });
 
-// ========== 图库灯箱 ==========
+// ========== 图片灯箱 ==========
 function openLightbox(item) {
   const img = item.querySelector('img');
   lightboxImg.src = img.src;
@@ -240,4 +233,4 @@ function showToast(message) {
 
 // ========== 初始化 ==========
 console.log('🌟 Personal page loaded. Current language: ' + currentLang);
-console.log('💡 Place images in assets/images/, files in assets/files/');
+console.log('💡 Place images in assets/images/');

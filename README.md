@@ -58,11 +58,10 @@ git push origin main
 │   ├── main.js               # 中英文切换、区块顺序、动画、灯箱和联系方式
 │   └── translations.js       # 所有中英文文字
 └── assets/
-    ├── images/
-    │   ├── avatar.jpg        # 头像
-    │   ├── research/         # 科研成果图片
-    │   └── honors/           # 获奖证书图片
-    └── files/                # 简历和项目压缩包，需要自行创建
+    └── images/
+        ├── avatar.jpg        # 头像
+        ├── research/         # 科研成果图片
+        └── honors/           # 获奖证书图片
 ```
 
 ## 3. 修改文字时最重要的规则
@@ -237,43 +236,6 @@ assets/images/honors/
 <img src="assets/images/honors/your-certificate.jpg" alt="Certificate" />
 ```
 
-### 5.4 上传画廊照片
-
-建议新建目录：
-
-```text
-assets/images/gallery/
-```
-
-上传图片后，将 `index.html` 的 `#gallery` 区域中 `placehold.co` 开头的占位图链接替换为本地路径：
-
-```html
-<img src="assets/images/gallery/photo-1.jpg" alt="Photo description" />
-```
-
-画廊标题由 `gallery-cap1` 至 `gallery-cap6` 控制，需要在 `translations.js` 中同步修改中英文。
-
-### 5.5 上传简历和项目文件
-
-创建目录：
-
-```text
-assets/files/
-```
-
-可使用以下默认文件名：
-
-```text
-assets/files/resume.pdf
-assets/files/projects.zip
-```
-
-若文件名不同，修改 `index.html` 下载按钮的 `href`：
-
-```html
-<a href="assets/files/your-resume.pdf" download>...</a>
-```
-
 ## 6. 修改科研成果
 
 科研成果位于 `index.html` 的：
@@ -382,7 +344,7 @@ assets/files/projects.zip
 
 证书卡片已经绑定点击放大功能，不需要额外编写 JavaScript。
 
-## 9. 修改“经历”、画廊和下载区域
+## 9. 修改“经历”区域
 
 校园或组织经历位于 `#org-section`，主要翻译键包括：
 
@@ -394,10 +356,6 @@ org-role
 org-achievement
 ```
 
-下载区域也位于 `#org-section` 内，相关键以 `res-` 开头。
-
-画廊位于 `#gallery`，标题和说明以 `gallery-` 开头。
-
 ## 10. 调整页面区块顺序
 
 导航链接顺序在 `index.html` 顶部的 `.nav-menu` 中调整。
@@ -406,13 +364,12 @@ org-achievement
 
 ```js
 experienceSection.before(researchSection, honorsSection);
-gallerySection.before(organizationSection);
 ```
 
 当前主要顺序是：
 
 ```text
-科研成果 → 获奖荣誉 → 项目经历 → 经历 → 画廊
+科研成果 → 获奖荣誉 → 项目经历 → 经历 → 联系
 ```
 
 如果只移动 HTML，而没有检查这几行 JavaScript，页面加载后可能会被重新排序。调整区块顺序时，应同时修改或删除对应的 DOM 排序代码，并同步调整导航栏顺序。
@@ -442,7 +399,6 @@ gallerySection.before(organizationSection);
 | 科研卡片 | `.research-card` |
 | 论文状态 | `.research-status-*` |
 | 荣誉卡片 | `.honor-card` |
-| 画廊 | `.gallery-grid`、`.gallery-item` |
 
 移动端样式位于 `@media` 查询中。修改布局后，建议同时检查电脑和手机宽度。
 
@@ -456,8 +412,6 @@ gallerySection.before(organizationSection);
 - [ ] 项目经历的桌面表格和移动端卡片均已修改
 - [ ] 荣誉证书图片和文字已替换
 - [ ] 首页统计数字与实际条目数量一致
-- [ ] 画廊占位图已替换为自己的照片
-- [ ] 简历和下载文件已上传，链接可以打开
 - [ ] 中文和英文翻译键保持一致
 - [ ] 所有图片路径区分大小写并与实际文件名完全一致
 
@@ -479,7 +433,7 @@ GitHub Pages 区分文件名大小写。请检查：
 正确写法：
 
 ```html
-<img src="assets/images/gallery/photo.jpg" alt="Photo" />
+<img src="assets/images/research/paper-figure.jpg" alt="Research figure" />
 ```
 
 ### 推送后网站没有立即更新
@@ -497,7 +451,6 @@ GitHub Pages 通常需要短暂时间重新部署。可在仓库的 `Actions` �
 1. `js/translations.js`：绝大部分中英文文字。
 2. `index.html`：姓名、联系方式、链接、图片路径和新增卡片结构。
 3. `js/main.js`：页面标题、微信号、复制邮箱和区块顺序。
-4. `assets/images/`：头像、科研图片、证书和画廊照片。
-5. `assets/files/`：简历和可下载文件。
+4. `assets/images/`：头像、科研图片和证书。
 
 修改完成后提交到 `main` 分支，GitHub Pages 会自动更新主页。
